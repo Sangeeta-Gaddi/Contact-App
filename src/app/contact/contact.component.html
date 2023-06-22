@@ -1,0 +1,76 @@
+<!-- <nav class="navbar bg-dark"> -->
+  <br>
+    <div class="d-flex">
+      <button class="btn  btn-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">Add CONTACT</button>
+    </div><br>
+  <!-- </nav> -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div style="background-color:yellowgreen" class="modal-header">
+          <h5 style="color:white" class="modal-title" id="exampleModalLabel">ADD CONTACT</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="contactform">
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1">Contact Name</label>
+              <input type="text" class="form-control" formControlName="cname" placeholder="Enter Contact Name">
+              <span class="text-danger" *ngIf="contactform.controls['cname'].dirty && contactform.hasError('required','cname')">* ContactName is required</span>
+            </div>
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1"> Address</label>
+              <input type="name" class="form-control" formControlName="address" placeholder="Enter Address">
+              <span class="text-danger" *ngIf="contactform.controls['address'].dirty && contactform.hasError('required','address')">*Address is required</span>
+            </div>
+            <div class="form-group mb-2">
+                <label for="exampleInputEmail1"> Number</label>
+                <input type="number" class="form-control" formControlName="number" placeholder="Enter Number">
+                <span class="text-danger" *ngIf="contactform.controls['number'].dirty && contactform.hasError('required','number')">*Number is required</span>
+              </div>
+            <div >
+              <label for="groupname">Group Name</label>
+               <select id="country" name="groupname" formControlName="groupname"
+               (change)="onChangeEvent($event)">
+                <option *ngFor="let item of data" [value]="item.name">{{item.name}}</option>
+               </select>
+            </div>
+            
+            
+          </form>
+        </div>
+        <div style="background-color:yellowgreen" class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          <button (click)="addcontact(this.contactform.value)"[disabled]="this.contactform.invalid" type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" mt-3>
+    <table class="table table-bordered" style="border: 2px solid black;">
+      <thead>
+        <tr>
+          <th scope="col">Contact Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Number</th>
+          <th scope="col">Groupname</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of contactdata ">
+          <td>{{item.cname}}</td>
+          <td>{{item.address}}</td>
+          <td>{{item.number}}</td>
+          <td>{{item.groupname}}</td>  
+          <td>
+            <button routerLink="/cupdate/{{item.id}}" class="btn btn-primary me-3">Edit</button>
+            <button class="btn btn-danger" (click)="deletecontact(item.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

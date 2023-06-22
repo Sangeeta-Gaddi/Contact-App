@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <h5>Update data</h5>
+                <div class="row">
+                    <form>
+
+                        <div class="form-group mb-2">
+                            <label for="exampleInputEmail1">Enter Contact Name</label>
+                            <input type="text" class="form-control" [(ngModel)]="contact.cname" name="cname"
+                                placeholder="Enter Contact Name">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="exampleInputEmail1">Enter Address</label>
+                            <input type="text" class="form-control" [(ngModel)]="contact.address" name="address"
+                                placeholder="Enter Address">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="exampleInputEmail1">Enter Number</label>
+                            <input type="number" class="form-control" [(ngModel)]="contact.number" name="number"
+                                placeholder="Enter Number">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="exampleInputEmail1">Enter Groupname</label>
+                            <input type="text" class="form-control" [(ngModel)]="contact.groupname" name="groupname"
+                                placeholder="Enter Groupname">
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <button  (click)="cupdate()" class="btn btn-success me-3">Update</button>
+                    <button routerLink="/contact" class="btn btn-dark">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

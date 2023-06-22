@@ -1,0 +1,102 @@
+{
+  "groupname": [
+    {
+      "id": 1,
+      "name": "School Friends"
+    },
+    {
+      "id": 2,
+      "name": "PU Friends"
+    },
+    {
+      "id": 3,
+      "name": "Degree Friends"
+    },
+    {
+      "id": 4,
+      "name": "Cosins"
+    }
+  ],
+  "contact": [
+    {
+      "cname": "Shubha",
+      "address": "Ilkal",
+      "number": 9876765434,
+      "groupname": "School Friends",
+      "id": 1
+    },
+    {
+      "cname": "Suraj",
+      "address": "Badami",
+      "number": 8876765454,
+      "groupname": "Degree Friends",
+      "id": 2
+    },
+    {
+      "cname": "Sahana",
+      "address": "Badami",
+      "number": 8899765454,
+      "groupname": "PU Friends",
+      "id": 4
+    },
+    {
+      "cname": "Viraj",
+      "address": "Bijapur",
+      "number": 8876765434,
+      "groupname": "PU Friends",
+      "id": 5
+    },
+    {
+      "cname": "Sukanya",
+      "address": "Jamakandi",
+      "number": 7876565454,
+      "groupname": "School Friends",
+      "id": 6
+    },
+    {
+      "cname": "Pavan",
+      "address": "Bijapur",
+      "number": 8877654534,
+      "groupname": "Degree Friends",
+      "id": 7
+    },
+    {
+      "cname": "Poorna",
+      "address": "Bijapur",
+      "number": 7786545432,
+      "groupname": "School Friends",
+      "id": 8
+    },
+    {
+      "cname": "Sujay",
+      "address": "Bijapur",
+      "number": 8767654343,
+      "groupname": "PU Friends",
+      "id": 9
+    },
+    {
+      "cname": "Amar",
+      "address": "Ilkal",
+      "number": 7676565434,
+      "groupname": "School Friends",
+      "id": 10
+    },
+    {
+      "cname": "Ananya ",
+      "address": "Lingsur",
+      "number": 8987876543,
+      "groupname": "PU Friends",
+      "id": 11
+    },
+    {
+      "cname": "Harshita",
+      "address": "Bijapur",
+      "number": 878765432,
+      "groupname": "School Friends",
+      "id": 12
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
